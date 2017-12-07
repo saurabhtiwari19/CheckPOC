@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Purchasepolicy" path="/sale-purchase-bsv_v2/ws/rest/purchasepolicy" id="ae80c181-78e2-40af-b9d3-cc74f3ce7bc4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ae80c181-78e2-40af-b9d3-cc74f3ce7bc4fileName">Purchasepolicy</con:setting></con:settings><con:parameters/><con:method name="Purchasepolicy 1" id="97141a6e-fd0d-4f11-bf79-b1085e41bcd3" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/vnd.allianz.policies-purchase-v1+xml</con:mediaType><con:status>500</con:status><con:params/><con:element>Map</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:v1="http://www.allianz.com/emagin/bs/purchase/v1">v1:purchaseRQ</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:v1="http://www.allianz.com/emagin/bs/purchase/v1">v1:purchaseRS</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/vnd.allianz.policies-purchase-v1+xml;charset=UTF-8</con:mediaType><con:status>400</con:status><con:params/><con:element>Map</con:element></con:representation><con:request name="Request 1" id="88083057-a0ca-4fb4-8b8c-e632b6268096" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://172.30.93.76:8080</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<pur:purchaseRQ xmlns:pur="http://www.allianz.com/emagin/bs/purchase/v1"
+	version="1.0.0">
+	<com:requestContext xmlns:com="http://www.allianz.com/emagin/bs/common/v1">
+		<com:correlationId>ID-agaff-cl915v-44367-1502203957792-18-13
+		</com:correlationId>
+		<com:partner code="MNG" />
+		<com:country code="ZA" />
+		<com:salesChannel code="Integrated" />
+		<com:language code="en" type="ISO-639-1" />
+		<com:issueDateTime>2015-01-15</com:issueDateTime>
+	</com:requestContext>
+	<pur:purchaseHolder id="1">
+		<com:title xmlns:com="http://www.allianz.com/emagin/bs/common/v1">mr</com:title>
+		<com:firstName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:firstName>
+		<com:lastName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:lastName>
+		<com:email xmlns:com="http://www.allianz.com/emagin/bs/common/v1">nish@gmail.com</com:email>
+		<com:country xmlns:com="http://www.allianz.com/emagin/bs/common/v1"
+			code="ZA" />
+		<com:address xmlns:com="http://www.allianz.com/emagin/bs/common/v1">
+			<com:addressLine>aa aaa</com:addressLine>
+			<com:locality>pune</com:locality>
+			<com:postalCode>411027</com:postalCode>
+			<com:country code="ZA" />
+		</com:address>
+	</pur:purchaseHolder>
+	<pur:purchases>
+		<pur:purchase id="1">
+			<pur:quoteContext>
+				<com:quoteContextDetails
+					xmlns:com="http://www.allianz.com/emagin/bs/common/v1">
+					<trv:travel xmlns:trv="http://www.allianz.com/emagin/bs/domain/travel/v1"
+						version="1.0.0">
+						<trv:startDate>2017-08-18</trv:startDate>
+						<trv:endDate>2017-08-19</trv:endDate>
+						<trv:tripType code="round-trip" />
+						<trv:originLocation>
+							<trv:country code="FR" />
+						</trv:originLocation>
+						<trv:destinationLocation>
+							<trv:country code="ZA" />
+						</trv:destinationLocation>
+						<trv:bookingDate>2015-01-15</trv:bookingDate>
+						<trv:totalTravelPrice currency="ZAR">123
+						</trv:totalTravelPrice>
+					</trv:travel>
+				</com:quoteContextDetails>
+			</pur:quoteContext>
+			<pur:policyHolder id="1">
+				<com:title xmlns:com="http://www.allianz.com/emagin/bs/common/v1">mr</com:title>
+				<com:firstName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:firstName>
+				<com:lastName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:lastName>
+				<com:email xmlns:com="http://www.allianz.com/emagin/bs/common/v1">nish@gmail.com</com:email>
+				<com:country xmlns:com="http://www.allianz.com/emagin/bs/common/v1"
+					code="ZA" />
+				<com:address xmlns:com="http://www.allianz.com/emagin/bs/common/v1">
+					<com:addressLine>aa aaa</com:addressLine>
+					<com:locality>pune</com:locality>
+					<com:postalCode>411027</com:postalCode>
+					<com:country code="ZA" />
+				</com:address>
+			</pur:policyHolder>
+			<pur:productPackage>
+				<pur:selectedProduct code="MNLE01" />
+				<pur:insuredItems>
+					<trv:travelers xmlns:trv="http://www.allianz.com/emagin/bs/domain/travel/v1"
+						version="1.0.0">
+						<trv:travelerPurchase id="1">
+							<com:title xmlns:com="http://www.allianz.com/emagin/bs/common/v1">mr</com:title>
+							<com:firstName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:firstName>
+							<com:lastName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:lastName>
+							<trv:dateOfBirth>1998-01-12</trv:dateOfBirth>
+						</trv:travelerPurchase>
+					</trv:travelers>
+				</pur:insuredItems>
+			</pur:productPackage>
+			<pur:purchaseGrossPremium currency="ZAR">100
+			</pur:purchaseGrossPremium>
+		</pur:purchase>
+	</pur:purchases>
+	<pur:totalGrossPremium currency="ZAR">100
+	</pur:totalGrossPremium>
+	<pur:paymentInformation>
+		<pay:paymentHolder xmlns:pay="http://www.allianz.com/emagin/bs/payment/v1">
+			<com:firstName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:firstName>
+			<com:lastName xmlns:com="http://www.allianz.com/emagin/bs/common/v1">aaa</com:lastName>
+			<com:email xmlns:com="http://www.allianz.com/emagin/bs/common/v1">nish@gmail.com</com:email>
+			<com:address xmlns:com="http://www.allianz.com/emagin/bs/common/v1">
+				<com:addressLine>aaa</com:addressLine>
+				<com:locality>pune</com:locality>
+				<com:postalCode>411027</com:postalCode>
+				<com:country code="ZA" />
+			</com:address>
+		</pay:paymentHolder>
+		<pay:paymentCard xmlns:pay="http://www.allianz.com/emagin/bs/payment/v1">
+			<pay:cardType code="VISA" />
+			<pay:cardHolderName>aaaaaa</pay:cardHolderName>
+			<pay:cardNumber>4111111111111111</pay:cardNumber>
+			<pay:cvc>123</pay:cvc>
+			<pay:endValidity month="04" year="18" />
+		</pay:paymentCard>
+	</pur:paymentInformation>
+</pur:purchaseRQ>
+]]></con:request><con:originalUri>http://172.30.93.76/sale-purchase-bsv_v2/ws/rest/purchasepolicy</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource>

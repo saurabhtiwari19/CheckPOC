@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2456d637-e120-4db5-a335-51b3e80532db" activeEnvironment="Default environment" name="REST Project 2" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:authRepository/><con:tags/></con:soapui-project>
